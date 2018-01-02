@@ -60,6 +60,7 @@ module DataShift
 
       def maintain_by_optype_helper( model_method )
         # Helper list of all available by type  [:belongs_to]
+        
         by_optype[model_method.operator_type.to_sym] ||= []
         by_optype[model_method.operator_type.to_sym] << model_method
         by_optype[model_method.operator_type.to_sym].uniq!
